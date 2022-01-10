@@ -1,5 +1,6 @@
 import CycleList from './Components/CycleList/CycleList';
-import CycleDetail from './Components/CycleList/CycleDetail/CycleDetail';
+import CycleDetail from './Components/CycleDetail/CycleDetail';
+import LikeDislike from './Components/LikeDislike/LikeDislike';
 import './App.css';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       </aside>
       <main>
         <CycleDetail />
+        <LikeDislike />
       </main>
     </div>
   );

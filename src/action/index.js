@@ -9,3 +9,17 @@ export const selectCycle = (cycle) => {
         payload: cycle
     };
 };
+
+export const like = (current_value) => {
+    return {
+        type: "LIKE",
+        payload: current_value += 1,
+    }
+}
+
+export const dislike = (current_value) => {
+    return {
+        type: "DISLIKE",
+        payload: current_value -= 1,
+    }
+}

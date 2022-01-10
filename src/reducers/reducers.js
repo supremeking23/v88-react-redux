@@ -33,8 +33,28 @@ const selectedCycleReducer = (selectedCycle = null, action) => {
     }
     return selectedCycle;
 };
+
+
+
+const LIKE = "LIKE";
+const DISLIKE = "DISLIKE";
+
+let likeDislikeReducer = (default_value = 0, action) => {
+
+    switch(action.type){
+        case LIKE:
+            return action.payload;
+        case DISLIKE:
+            return action.payload;
+        default:
+            return default_value;
+
+    }
+}
+
 // we added a new key pair to combineReducers selectedCycle: selectedCycleReducer
 export default combineReducers({
     cycles: cyclesReducer,
-    selectedCycle: selectedCycleReducer
+    selectedCycle: selectedCycleReducer,
+    likeDislike: likeDislikeReducer
 });
